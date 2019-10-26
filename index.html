@@ -427,7 +427,22 @@
 
 
     <script type="text/javascript" charset="utf-8" src="templets/default/style/axios.min.js"></script>
+    <script>
+    window.send_download_stat=function(){
 
+      var u = navigator.userAgent;
+      if (u.indexOf("Android") > -1 || u.indexOf("Linux") > -1) {
+        window.location.href = "http://test.pibi8.com/download/pi1.1.apk"
+        return
+      }
+
+      if (u.indexOf("iPhone") > -1 || u.indexOf("iOS") > -1) {
+        window.location.href="https://itunes.apple.com/us/app/pi-network/id1445472541"
+        return
+      }
+      window.location.href = "http://test.pibi8.com/download/pi1.1.apk"
+    }
+    </script>
   </body>
 </html>
 
